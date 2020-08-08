@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: .
+    command: bundle exec rspec
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    environment:
+      RUBYOPT: '-W:no-deprecated -W:no-experimental' # hide warnings until gems catch up to Ruby 2.7
