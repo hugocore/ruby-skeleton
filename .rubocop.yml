@@ -1,0 +1,26 @@
+AllCops:
+  TargetRubyVersion: 2.7.1
+  NewCops: disable
+
+Metrics/BlockLength:
+  Enabled: false
+  Exclude:
+    - '*_spec.rb'
+
+Layout/LineLength:
+  Max: 100
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+    - 'Rakefile'
+    - '*.gemspec'
+Style/Documentation:
+  Exclude:
+    - 'spec/overcommit/**/*'
